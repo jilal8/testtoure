@@ -10,9 +10,13 @@ import fr.amu.Services.*;
 public class Controller {
 
 	
-
+	@Autowired
+	ServletContext context;
 	
-	@RequestMapping("/index") 
+	@Autowired
+	RendezvousService rdvservice;
+	
+	@RequestMapping(value = "/index", method = RequestMethod.GET) 
 	public String add(){
 	
 	return "index"; 
