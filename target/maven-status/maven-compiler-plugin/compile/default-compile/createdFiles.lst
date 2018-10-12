@@ -1,5 +1,12 @@
 fr/amu/util/Utils$2.class
+fr/amu/dao/RendezvousDAO.class
+fr/amu/dao/RendezvousMapper.class
+fr/amu/Services/RendezvousService.class
+fr/amu/dao/RendezvousDAOImpl.class
 fr/amu/util/OsValidator.class
+fr/amu/servlets/HelloServlet.class
 fr/amu/util/Utils$1.class
+fr/amu/servlets/Controller.class
 fr/amu/util/Utils.class
+fr/amu/beans/Rendezvous.class
 fr/amu/Application.class

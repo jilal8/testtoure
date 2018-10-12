@@ -21,7 +21,7 @@ public class RendezvousDAOImpl implements RendezvousDAO {
 	
 	@Override
 	public void insertion(Rendezvous rdv) {
-		String sql = "INSERT INTO rendezvous(duree,lieu, type)" + "VALUES(?,?,?)";
+		String sql = "INSERT INTO rendezvous(duree,lieu, Type)" + "VALUES(?,?,?)";
 		jbdc.update(sql, rdv.getDuree(),rdv.getLieu(),rdv.getType());
 	}
 	
@@ -37,14 +37,14 @@ public class RendezvousDAOImpl implements RendezvousDAO {
 	public List<Rendezvous> getRendezvousType(String type) {
 		String sql = "SELECT * FROM rendezvous where type = ?";
 		RowMapper<Rendezvous> rowMapper = new BeanPropertyRowMapper<Rendezvous>(Rendezvous.class);
-		return jbdc.query;
-		
+//		return jbdc.query;
+		return null;
 	}
 
 	@Override
 	public void update(Rendezvous rdv) {
 		String sql = "UPDATE rendezvous SET duree = ?, lieu = ?"
-				+ ", type = ? WHERE id = ?";
+				+ ", Type = ? WHERE id = ?";
 		jbdc.update(sql, rdv.getDuree(),rdv.getLieu(), rdv.getType(), rdv.getId());
 	}
 

@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 
 
 @WebServlet(
-        name = "MaServle",
+        name = "MaServlet",
         urlPatterns = {"/hello","/bonjour"}
 )
 public class HelloServlet extends HttpServlet implements Serializable {
