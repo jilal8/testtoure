@@ -51,7 +51,7 @@ public class Utils {
 	 * Classe utilisant l'OSValidator pour ouvrir le navigateur par défaut à l'url spécifiée
 	 * @param url
 	 */
-	public static void openBrowser(String url) {
+	public static void openBrowser(final String url) {
 		if (OsValidator.isWindows()) {
 			System.out.println("This is Windows");
 
@@ -64,7 +64,7 @@ public class Utils {
 		} else if (OsValidator.isMac()) {
 			System.out.println("This is Mac");
 			if (Desktop.isDesktopSupported()) {
-				Desktop desktop = Desktop.getDesktop();
+				final Desktop desktop = Desktop.getDesktop();
 				Thread t = new Thread("New Thread") {
 					public void run() {
 						try {
@@ -79,7 +79,7 @@ public class Utils {
 		} else if (OsValidator.isUnix()) {
 			System.out.println("This is Unix or Linux");
 			if (Desktop.isDesktopSupported()) {
-				Desktop desktop = Desktop.getDesktop();
+				final Desktop desktop = Desktop.getDesktop();
 				Thread t = new Thread("New Thread") {
 					public void run() {
 						try {
